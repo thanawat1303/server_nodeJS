@@ -14,9 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
             reader.addEventListener('load' , (e)=>{
                 document.getElementById('exImg').setAttribute('src' , e.currentTarget.result)
             })
-        } else {
-            
         }
+    })
+
+    document.getElementById('faculty').addEventListener('change' , (e)=>{
+        if(e.target.value != 0) {
+            e.target.setAttribute('style' , 'color:black')
+        }
+    })
+
+    document.getElementById('gendar').addEventListener('change' , (e)=>{
+        if(e.target.value != 0) {
+            e.target.setAttribute('style' , 'color:black')
+        }
+    })
+
+    document.querySelector('button[type="reset"]').addEventListener('click' , ()=>{
+        document.getElementById('faculty').setAttribute('style' , 'color:black')
+        document.getElementById('gendar').setAttribute('style' , 'color:black')
     })
 })
 

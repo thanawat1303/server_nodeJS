@@ -10,7 +10,7 @@
 </head>
 <body>
     <section id="form-sign">
-        <h2 id="head-form">แบบฟอร์มการกรอกข้อมูล<br>ทะเบียนนักศึกษา</h2>
+        <h2 id="head-form">ฟอร์มการกรอกข้อมูล<br>ทะเบียนนักศึกษา</h2>
         <form id="body-form">
             <div class="container-ID marginInput" id="container-IDPerson"></div>
             <div class="container-ID marginInput" id="container-IDStudent"></div>
@@ -35,19 +35,19 @@
                 <input class="width-100" type="email" id="email" placeholder="อีเมล">
             </div>
             <div class="marginInput">
-                <select class="sp-3" id="faculty">
-                    <option value="0">คณะที่ทำการศึกษา</option>
-                    <option value="male">วิศวกรรมศาสตร์</option>
-                    <option value="famale">สถาปัตยกรรม</option>
+                <select class="sp-3" id="faculty" style="color:#757575;">
+                    <option disabled selected value="0">คณะที่ทำการศึกษา</option>
+                    <option value="วิศวกรรมศาสตร์" style="color: black;">วิศวกรรมศาสตร์</option>
+                    <option value="สถาปัตยกรรม" style="color: black;">สถาปัตยกรรม</option>
                 </select>
                 <span class="boxBrithday">
                     <input class="sp-3" type="text" id="birthday" readonly placeholder="วันเกิด">
                     <input class="sp-3" type="date" id="birthdayInput" placeholder="วันเกิด">
                 </span>
-                <select class="sp-3" id="gendar">
-                    <option value="0">เพศ</option>
-                    <option value="male">ชาย</option>
-                    <option value="famale">หญิง</option>
+                <select class="sp-3" id="gendar" style="color:#757575;">
+                    <option disabled selected value="0">เพศ</option>
+                    <option style="color: black;" value="male">ชาย</option>
+                    <option style="color: black;" value="famale">หญิง</option>
                 </select>
             </div>
             <div class="marginInput ct-flex" style="flex-direction: column;">
@@ -58,10 +58,10 @@
                 <br>
                 <img id="exImg" src="RMUTT.png" width="100px">
             </div>
-            <div class="marginInput">
+            <label class="marginInput" style="cursor: pointer;">
                 <input type="checkbox" id="imNotRobot">
-                <label for="imNotRobot">ฉันไม่ใช่หุ่นยนต์</label>
-            </div>
+                ฉันไม่ใช่หุ่นยนต์
+            </label>
             <div class="marginInput">
                 <button type="submit">บันทึก</button>
                 <button type="reset">ยกเลิก</button>
