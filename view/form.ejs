@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>แบบฟอร์มบันทึกการกรอกข้อมูลทะเบียนนักศึกษา</title>
-    <%- include('js.ejs') %>
-    <%- include('style.ejs') %>
+    <link href="/style/style.css" rel="stylesheet">
+    <script src="/js/js.js"></script>
 </head>
 <body>
     <section id="form-sign">
@@ -14,24 +14,24 @@
         <form id="body-form">
             <div class="container-ID marginInput" id="container-IDPerson"></div>
             <div class="container-ID marginInput" id="container-IDStudent"></div>
-            <div class="marginInput">
-                <input class="width-100" type="text" id="fullname" placeholder="ชื่อและนามสกุล">
+            <div class="marginInput ct-flex">
+                <div class="ct-gendar">
+                    <label class="marginInput radio-box">
+                        <input type="radio" name="prefixName" id="prefixMale">
+                        นาย
+                    </label>
+                    <label class="marginInput radio-box">
+                        <input type="radio" name="prefixName" id="prefixNameWife">
+                        นาง
+                    </label>
+                    <label class="marginInput radio-box">
+                        <input type="radio" name="prefixName" id="prefixNameFamale">
+                        นางสาว
+                    </label>
+                </div>
+                <input style="width: 78%;" class="width-100" type="text" id="fullname" placeholder="ชื่อและนามสกุล">
             </div>
-            <div>
-                <span class="marginInput">
-                    <input type="radio" name="prefixName" id="prefixMale">
-                    <label for="prefixMale">นาย</label>
-                </span>
-                <span class="marginInput">
-                    <input type="radio" name="prefixName" id="prefixNameWife">
-                    <label for="prefixNameWife">นาง</label>
-                </span>
-                <span class="marginInput">
-                    <input type="radio" name="prefixName" id="prefixNameFamale">
-                    <label for="prefixNameFamale">นางสาว</label>
-                </span>
-            </div>
-            <div class="marginInput">
+            <div class="marginInput ct-flex">
                 <input class="width-100" type="email" id="email" placeholder="อีเมล">
             </div>
             <div class="marginInput">
@@ -44,14 +44,19 @@
                     <input class="sp-3" type="text" id="birthday" readonly placeholder="วันเกิด">
                     <input class="sp-3" type="date" id="birthdayInput" placeholder="วันเกิด">
                 </span>
-                <select class="sp-3" id="gender">
+                <select class="sp-3" id="gendar">
                     <option value="0">เพศ</option>
                     <option value="male">ชาย</option>
                     <option value="famale">หญิง</option>
                 </select>
             </div>
-            <div class="marginInput">
-                <input type="file" accept=".jpg">
+            <div class="marginInput ct-flex" style="flex-direction: column;">
+                <label class="img-st">
+                    <input type="file" id="input-img" accept=".jpg , .png">
+                    รูปภาพนักศึกษา
+                </label>
+                <br>
+                <img id="exImg" src="RMUTT.png" width="100px">
             </div>
             <div class="marginInput">
                 <input type="checkbox" id="imNotRobot">
