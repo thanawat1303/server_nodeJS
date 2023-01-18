@@ -6,26 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>แบบฟอร์มบันทึกการกรอกข้อมูลทะเบียนนักศึกษา</title>
     <link href="/style/style.css" rel="stylesheet">
-    <script src="/js/js.js"></script>
+    <script src="/js/js1.js"></script>
 </head>
 <body>
     <section id="form-sign">
         <h2 id="head-form">ฟอร์มการกรอกข้อมูล<br>ทะเบียนนักศึกษา</h2>
-        <form id="body-form">
-            <div class="container-ID marginInput" id="container-IDPerson"></div>
-            <div class="container-ID marginInput" id="container-IDStudent"></div>
+        <form method="post" action="profile" id="body-form">
+            <label style="
+            text-align: left;
+            display: flex;
+            flex-direction: column;">
+                รหัสบัตรประชาชน :
+                <div class="container-ID" id="container-IDPerson"></div>
+            </label>
+            <label
+            style="
+            text-align: left;
+            display: flex;
+            flex-direction: column;"
+            >
+                รหัสนักศึกษา :
+                <div class="container-ID" id="container-IDStudent"></div>
+            </label>
             <div class="marginInput ct-flex">
                 <div class="ct-gendar">
                     <label class="marginInput radio-box">
-                        <input type="radio" name="prefixName" id="prefixMale">
+                        <input value="นาย" type="radio" name="prefixName" id="prefixMale">
                         นาย
                     </label>
                     <label class="marginInput radio-box">
-                        <input type="radio" name="prefixName" id="prefixNameWife">
+                        <input value="นาง" type="radio" name="prefixName" id="prefixNameWife">
                         นาง
                     </label>
                     <label class="marginInput radio-box">
-                        <input type="radio" name="prefixName" id="prefixNameFamale">
+                        <input value="นางสาว" type="radio" name="prefixName" id="prefixNameFamale">
                         นางสาว
                     </label>
                 </div>
@@ -58,8 +72,11 @@
                 <br>
                 <img id="exImg" src="RMUTT.png" width="100px">
             </div>
-            <label class="marginInput" style="cursor: pointer;">
-                <input type="checkbox" id="imNotRobot">
+            <label class="marginInput" style="
+            cursor: pointer; 
+            display: flex;
+            justify-content: center;">
+                <input type="checkbox" required id="imNotRobot">
                 ฉันไม่ใช่หุ่นยนต์
             </label>
             <div class="marginInput">

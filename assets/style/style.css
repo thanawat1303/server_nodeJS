@@ -7,7 +7,7 @@ html {
 
 body {
     height: 100vh;
-    min-height: 700px;
+    min-height: 710px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,9 @@ body {
 }
 
 .container-ID {
-    text-align: center;
+    text-align: right;
+    width: 100%;
+    margin: 5px 0px;
 }
 
 .container-ID input {
@@ -50,8 +52,8 @@ body {
     flex-direction: column;
     background-color: rgba(61, 232, 255, 0.266);
     max-width: 700px;
-    height: 700px;
-    padding: 0px 20px;
+    max-height: 710px;
+    padding: 0px 30px;
     text-align: center;
     border-radius: 20px;
     backdrop-filter: blur(5px);
@@ -92,14 +94,14 @@ body {
 }
 
 #faculty {
-    width: 60%;
+    width: 55%;
     font-size: 18px;
     padding: 2px;
     border-radius: 8px;
 }
 
 .boxBrithday {
-    width: 27%;
+    width: 32%;
     display: inline-flex;
     justify-content: center
 }
@@ -142,8 +144,8 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
 }
 
 input[type="file"] {

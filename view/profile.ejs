@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+</head>
+<body align="center" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+">
+    <div id="body" style="
+        width: 320px;
+    ">
+        <h1>PROFILE</h1>
+        <img id="img" width="300px">
+        <div style="text-align: left;">
+            <p id="idPs"></p>
+            <p id="idSd"></p>
+            <p id="fullname-birthday"></p>
+            <p id="email-gendar"></p>
+            <p id="faculty"></p>
+        </div>
+    </div>
+</body>
+<script>
+    if(sessionStorage.length > 0){
+        document.getElementById('img').setAttribute('src' , sessionStorage.getItem('img'))
+        document.getElementById('idPs').innerHTML = "รหัสบัตรประจำตัวประชาชน : "+sessionStorage.getItem('IdPs')
+        document.getElementById('idSd').innerHTML = "รหัสบัตรนักศึกษา : "+sessionStorage.getItem('IdSd')
+        document.getElementById('fullname-birthday').innerHTML = "ชื่อนักศึกษา "+sessionStorage.getItem('prefix')+" "+sessionStorage.getItem('fullname')+"  วันเกิด "+sessionStorage.getItem('birthday')
+        document.getElementById('email-gendar').innerHTML = "อีเมลนักศึกษา "+sessionStorage.getItem('email')+"  เพศ "+sessionStorage.getItem('gendar')
+        document.getElementById('faculty').innerHTML = "คณะ "+sessionStorage.getItem('faculty')
+    } else {
+        document.getElementById('body').innerHTML = '<h1>กรุณากรอกข้อมูล</h1>'
+    }
+
+</script>
+</html>
